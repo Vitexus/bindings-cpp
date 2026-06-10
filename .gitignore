@@ -1,8 +1,8 @@
-.nyc_output
-build
-coverage
 node_modules
-npm-debug.log
-prebuilds
-.tool-versions
-dist
+build/
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/*.substvars
+debian/*.debhelper.log
+debian/node-serialport-bindings-cpp/

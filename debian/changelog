@@ -1,0 +1,6 @@
+node-serialport-bindings-cpp (13.0.1) unstable; urgency=medium
+
+  * Initial Debian packaging of @serialport/bindings-cpp; JS dist/ vendored
+    from npm 13.0.1, native addon compiled from source.
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Wed, 10 Jun 2026 09:15:00 +0200

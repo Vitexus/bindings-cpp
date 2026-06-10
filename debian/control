@@ -1,0 +1,28 @@
+Source: node-serialport-bindings-cpp
+Section: javascript
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends:
+ debhelper-compat (= 13),
+ node-gyp,
+ node-addon-api,
+ node-gyp-build
+Standards-Version: 4.7.0
+Homepage: https://github.com/serialport/bindings-cpp
+Vcs-Browser: https://github.com/Vitexus/bindings-cpp
+Rules-Requires-Root: no
+
+Package: node-serialport-bindings-cpp
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ node-serialport-bindings-interface,
+ node-serialport-parser-readline,
+ node-debug,
+ node-gyp-build,
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: Native Node.js bindings for serial port access
+ The native C++ Node.js addon used by the serialport library to access serial
+ ports on Linux via termios. The JavaScript dist/ is vendored from the npm
+ 13.0.1 release; the native addon is compiled from source at build time.

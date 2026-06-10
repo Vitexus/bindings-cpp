@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+export DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+NODEDIR = debian/node-serialport-bindings-cpp/usr/lib/$(DEB_HOST_MULTIARCH)/nodejs/@serialport/bindings-cpp
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+override_dh_auto_build:
+	node-gyp configure build
+override_dh_auto_test:
+
+override_dh_install:
+	install -d $(NODEDIR)/build/Release
+	cp -r dist $(NODEDIR)/
+	install -m 644 package.json $(NODEDIR)/
+	install -m 755 build/Release/bindings.node $(NODEDIR)/build/Release/
