@@ -5,8 +5,7 @@ Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
 Build-Depends:
  debhelper-compat (= 13),
  node-gyp,
- node-addon-api,
- node-gyp-build
+ node-addon-api
 Standards-Version: 4.7.0
 Homepage: https://github.com/serialport/bindings-cpp
 Vcs-Browser: https://github.com/Vitexus/bindings-cpp
